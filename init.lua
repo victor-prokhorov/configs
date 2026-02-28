@@ -1,3 +1,7 @@
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none", fg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none", fg = "none" })
 vim.diagnostic.config({
     float = {
         header = "",
@@ -10,9 +14,9 @@ vim.g.fzf_preview_window = ""
 vim.g.mapleader = " "
 vim.g.netrw_banner = 0
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
-vim.keymap.set('n', '<leader>b', '<cmd>Buffers<cr>')
-vim.keymap.set('n', '<leader>f', '<cmd>Files<cr>')
-vim.keymap.set('n', '<leader>g', '<cmd>Rg<cr>')
+vim.keymap.set("n", "<leader>b", "<cmd>Buffers<cr>")
+vim.keymap.set("n", "<leader>f", "<cmd>Files<cr>")
+vim.keymap.set("n", "<leader>g", "<cmd>Rg<cr>")
 vim.opt.expandtab = true
 vim.opt.guicursor = ""
 vim.opt.hlsearch = false
@@ -49,8 +53,7 @@ require("lazy").setup({
             dependencies = {
                 {
                     "junegunn/fzf",
-                    dir = "~/fzf",
-                    build = "./install --all"
+                    dir = "/usr/share/doc/fzf/examples",
                 }
             }
         },
