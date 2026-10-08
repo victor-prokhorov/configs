@@ -51,10 +51,7 @@ require("lazy").setup({
         {
             "junegunn/fzf.vim",
             dependencies = {
-                {
-                    "junegunn/fzf",
-                    dir = "/usr/share/doc/fzf/examples",
-                }
+                "junegunn/fzf"
             }
         },
         {
